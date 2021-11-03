@@ -80,8 +80,18 @@ console.log(dictionary["mo-mo"])
 
 dictionary["vasea"] = 4;
 dictionary.momo = "zuzu"
-
+delete dictionary.dodo
 
 for (const key in dictionary) {
     console.log(key, dictionary[key])
 }
+
+const mySet = new Set([1, 4, 12, 4, 41, 4])
+console.log(mySet.values())
+console.log(mySet.size)
+console.log(mySet.has(5))
+console.log(mySet.has(4))
+mySet.forEach(value => console.log(value))
+mySet.add(69)
+mySet.delete(1)
+console.log(mySet)
