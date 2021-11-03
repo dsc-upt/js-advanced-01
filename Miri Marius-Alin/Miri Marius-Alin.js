@@ -63,20 +63,22 @@ for (const item of myArray){
 console.log();
 
 let unsorted = [2, 4, 1, 5, 3, 6, 4, 5];
-// let ok = 1;
-// while( ok ){
-//     let aux;
-//     ok = 0;
-//     for ( let i = 0; i < unsorted.length - 1; i++){
-//     if (unsorted[i] > unsorted [i+1]){
-//         aux = unsorted[i];
-//         unsorted [i] = unsorted [i + 1];
-//         unsorted[ i + 1 ] = aux;
-//         ok = 1; 
-//     }
-// }
-// }
-
+function sort ( sorted ){
+let ok = 1;
+while( ok ){
+    let aux;
+    ok = 0;
+    for ( let i = 0; i < sorted.length - 1; i++){
+    if (sorted[i] > sorted [i+1]){
+        aux = sorted[i];
+        sorted [i] = sorted [i + 1];
+        sorted[ i + 1 ] = aux;
+        ok = 1; 
+    }
+}
+}
+console.log(sorted);
+}
 // nu se modifica parametrii unei functii
 console.log();
 function decrement ( number ) {
@@ -107,7 +109,7 @@ console.log(dictionary.one);
 for ( const key in dictionary){
     console.log(key, dictionary[key]);
 }
-
+delete dictionary.three;
 console.log();
 const keys = Object.keys(dictionary);
 console.log(keys);
@@ -120,3 +122,14 @@ dictionary["showName"] = showName;
 
 dictionary.showName("Name from dic");
 dictionary["showName"]("Name from dic v2.0");
+
+const mySet = new Set ( [ 1, 2, 3, 4, 5, 6, 2]);
+console.log(mySet);
+console.log(mySet.has(3));
+console.log(mySet.has(7));
+console.log();
+mySet.forEach(value => console.log(value));
+mySet.add(56);
+mySet.delete(4);
+console.log();
+mySet.clear();  
