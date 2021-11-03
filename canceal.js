@@ -86,3 +86,12 @@ dictionary['showName'] = showName;
 
 dictionary.showName('Name from dict');
 dictionary['showName']('Name from dict v2');
+
+const mySet = new Set([1, 2, 3, 4, 5, 5, 6, 4]);
+console.log(mySet.size);
+console.log(mySet.has(2));
+mySet.forEach(value => console.log(value));
+mySet.add(12);
+mySet.delete(4);
+mySet.clear();
+console.log(mySet);
