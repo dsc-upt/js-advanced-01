@@ -55,3 +55,48 @@ for (const item of myArray){
 
     console.log(item)
 }
+
+function decrement(number){
+    const newNumber = number -1;
+    console.log(newNumber);
+
+    if(newNumber > 1){
+        return decrement(newNumber)
+    }
+    return;
+}
+
+decrement(10)
+
+const dictionary = {
+    one: 'one',
+    "two-two": [1, 5, 6],
+    4: "patru"
+}
+
+console.log(dictionary)
+console.log(dictionary.one)
+console.log(dictionary["two-two"])
+console.log(dictionary[4])
+
+dictionary["three"] = "number three"
+dictionary["number"] = "45"
+
+console.log(dictionary.three)
+console.log(dictionary)
+
+
+for (const key in dictionary){
+    console.log(key, dictionary[key])
+}
+const keys = Object.keys(dictionary);
+console.log(keys)
+
+for (const key of Object.keys(dictionary)){
+    console.log(key)
+}
+
+dictionary['showName'] = showName
+
+dictionary.showName('Name from dict')
+dictionary['showName']('Name from dict v2.0')
