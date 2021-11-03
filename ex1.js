@@ -23,6 +23,45 @@ function by10(value, index){
 
 console.log(myArray.filter(by10));
 
+function decrement (number){
+    const newNumber = number - 1;
+    console.log(newNumber);
+    if(newNumber > 1){
+        return decrement(newNumber);
+    }
+}
 
+decrement(10);
+
+const dictionary = {
+    one: "nr",                    // *
+    "two - two": [1, 3, 5],
+    "x": "tot p variabila ca one" // *
+}
+console.log(dictionary);
+
+console.log(dictionary.one);
+console.log(dictionary["two - two"]);
+
+dictionary["ceva"] = "alt ceva";
+console.log(dictionary);
+console.log(dictionary.ceva);
+console.log(dictionary.x);
+
+for (const key in dictionary){
+    console.log(key,dictionary[key]);
+}
+
+const keys = Object.keys(dictionary);
+console.log(keys);
+
+for (const key of keys){
+    console.log(key);
+}
+
+dictionary["showName"] = showName
+
+dictionary.showName("Name from dict");
+dictionary["showName"]("ceva frumos");
 
 
