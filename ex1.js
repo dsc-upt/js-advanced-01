@@ -65,3 +65,19 @@ dictionary.showName("Name from dict");
 dictionary["showName"]("ceva frumos");
 
 
+function myFunc(par1, par2) {
+    console.log(par1 + par2);
+}
+
+myFunc("ceva", " altceva");
+
+const x = function (name){
+    console.log(name);
+}
+
+x("nrbi");
+
+const myLambda1 = (name) =>{
+    console.log("alt ceva " + name);
+}
+myLambda1("ceva");
