@@ -22,3 +22,7 @@ function by10(value, index){
 }
 
 console.log(myArray.filter(by10));
+
+
+
+
