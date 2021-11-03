@@ -43,3 +43,34 @@ for (const item of myArray){
         break;
     console.log(item)
 }
+
+function decrement(number){
+    // number = number--; -> bad programming practice
+    const newNumber = number - 1;
+    console.log(newNumber);
+
+    if(newNumber > 1){
+        return decrement(newNumber)
+    }
+    return;
+}
+decrement(10)
+
+//dictionaries
+const dictionary = {
+    one : "one",
+    "two-two" : [1, 5, 6],
+    4 : "patru"
+}
+console.log(dictionary["two-two"])
+console.log(dictionary[4])
+dictionary["three"] = "number three"
+
+console.log(dictionary.three)
+
+for(const key in dictionary){
+    console.log(key, dictionary[key])
+}
+dictionary["showName"] = showName
+
+dictionary.showName("Name from dict")
