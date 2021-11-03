@@ -49,8 +49,39 @@ for (let i = 0; i < myArray.length; i++) {
 // loop array lambda
 myArray.forEach(value => console.log(value * 100))
 
-// loop array foreach
+// loop array foreach, this works for lists, it doesn't work for dictionaryies
 for (const item of myArray)
     console.log(item - item)
 
+function decrement(number) {
+    // nubmer-- bad practice, better not to modify function parameters
+    const newNumber = number - 1;
+    if (newNumber > 1) {
+        decrement(newNumber);
+    }
+    return newNumber;
+}
 
+console.log(decrement(50))
+
+const dictionary = {
+    one : 'one',
+    2 : 'two',
+    "momo" : [1, 4, 5],
+    "mo-mo" : [1, 4, 5], // nu pot fi numite cu cratima
+    dodo : 5
+}
+
+console.log(dictionary)
+console.log(dictionary.one)
+console.log(dictionary["2"])
+console.log(dictionary.momo) // nu pot fi numite cu cratima
+console.log(dictionary["mo-mo"])
+
+dictionary["vasea"] = 4;
+dictionary.momo = "zuzu"
+
+
+for (const key in dictionary) {
+    console.log(key, dictionary[key])
+}
