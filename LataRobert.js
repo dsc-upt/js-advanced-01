@@ -92,4 +92,16 @@ for (const key of Object.keys(myDictionary)) {
 myDictionary['showName'] = showName
 myDictionary.showName('Name from dictionary');
 myDictionary['showName']('Name from dictionary v2');
+delete myDictionary.three;
+console.log(myDictionary);
 
+const mySet = new Set([1, 2, 3, 4, 4, 4, 5, 2]);
+console.log(mySet);
+console.log(mySet.size);
+console.log(mySet.has(7));
+console.log(mySet.has(2));
+mySet.forEach(value => console.log(value));
+mySet.add(67);
+mySet.delete(4);
+mySet.clear();
+console.log(mySet);
