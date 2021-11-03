@@ -64,6 +64,8 @@ dictionary["showName"] = showName
 dictionary.showName("Name from dict");
 dictionary["showName"]("ceva frumos");
 
+delete dictionary.x;
+console.log(dictionary);
 
 function myFunc(par1, par2) {
     console.log(par1 + par2);
@@ -81,3 +83,16 @@ const myLambda1 = (name) =>{
     console.log("alt ceva " + name);
 }
 myLambda1("ceva");
+
+console.log(" ");
+
+const mySet = new Set([1, 2, 3, 4,5]); // multimi
+console.log(mySet);
+console.log(mySet.size);
+console.log(mySet.has(7));
+console.log(mySet.has(2));
+mySet.forEach(value => console.log(value));
+mySet.add(10);
+mySet.delete(3);
+// mySet.clear() // sterge tot
+console.log(mySet);
